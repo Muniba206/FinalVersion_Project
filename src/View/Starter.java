@@ -1,10 +1,14 @@
 package View;
 
-public class Starter {
+/* Controller will be implemented by Lina named DBWrapper
+import Controller.DBWrapper; */
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+     public static void main (String[] args){
+    	 
+    	 LogIn log= new LogIn();
+    	 log.setVisible(true);
+    	 
+    	 //System.out.println("???");
+     }
 
-	}
 
-}
