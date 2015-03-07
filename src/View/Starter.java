@@ -1,7 +1,11 @@
 package View;
 
-/* Controller will be implemented by Lina named DBWrapper
-import Controller.DBWrapper; */
+/* Controller will be implemented by Lina named DBWrapper */
+
+import Controller.DBWrapper; 
+
+
+public class Starter{
 
      public static void main (String[] args){
     	 
@@ -11,4 +15,4 @@ import Controller.DBWrapper; */
     	 //System.out.println("???");
      }
 
-
+}
