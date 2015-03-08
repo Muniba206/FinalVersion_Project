@@ -25,7 +25,7 @@ public class DBWrapper implements java.io.Serializable {
 	public static String sqlString;
 //	public static ServerGUI host;
 	
-
+// connecting the database
 	public static boolean connect()  {
 	
 			
@@ -46,7 +46,7 @@ public class DBWrapper implements java.io.Serializable {
 					}
 			return false;
 		}
-	
+//	connect the database and creating the schema
 	public static boolean  connect2()	
 	{
 		try {
@@ -93,6 +93,7 @@ public class DBWrapper implements java.io.Serializable {
 //	return false;
 //}
 //	
+	
 // log on method where we check if the username and password matches.
 	public static boolean authenticate(String username, String enteredPass) {
 		try {
