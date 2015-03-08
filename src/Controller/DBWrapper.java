@@ -12,8 +12,7 @@ import View.Register;
 
 
 /**
- * Database wrapper klasse som indeholder alle metoder der fungerer som
- * forbindelse mellem applikationen og databasen
+ * Database wrapper class contains all the metods to connect, etabling connection, creat tables and passing data in and out from the database
  */
 public class DBWrapper implements java.io.Serializable {
 	/**
