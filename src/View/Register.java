@@ -1,5 +1,12 @@
 package View;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+import View.LogIn;
+
 public class Register extends JFrame{
 
 	private JPanel contentPane;
@@ -61,6 +68,17 @@ public class Register extends JFrame{
     				else
     					JOptionPane.showMessageDialog(null, "The Password must have at least eight characters of only letters and digits,must contain at least two digits");
     				}
+    		});
+    		
+    		
+
+    		JButton btnNewButton = new JButton("Back to Login");
+    		btnNewButton.addActionListener(new ActionListener() {
+    			public void actionPerformed(ActionEvent arg0) {
+    				LogIn log= new LogIn();
+    				log.setVisible(true);
+    				CloseJframe();
+    			}
     		});
     		btnCreateUser.setBounds(115, 206, 117, 29);
     		contentPane.add(btnCreateUser);

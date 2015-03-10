@@ -3,13 +3,9 @@ package View;
 
 import javax.swing.*;
 
-// The later part need to be done Lina 
-
-/*import model.ChatMessage;
-import model.Client; */
-
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Date;
 
 
 /*
@@ -170,8 +166,10 @@ public class ClientGUI extends JFrame implements ActionListener {
 			if(portNumber.length() == 0)
 				return;
 			int port = 0;
+			Date date= new Date();
 			try {
 				port = Integer.parseInt(portNumber);
+				System.out.println("Start Chating: "+date.toString());
 			}
 			catch(Exception en) {
 				return;   // nothing I can do if port number is not valid
@@ -184,8 +182,10 @@ public class ClientGUI extends JFrame implements ActionListener {
 				return;
 			tf.setText("");
 //			label.setText("Enter your message below");
+			Date date2= new Date();
+			System.out.println("Started: "+date2.toString());
 			connected = true;
-			
+			System.out.println(date2.getTime()-date.getTime()+" Millisecounds");
 			// disable login button
 			login.setEnabled(false);
 			// enable the 2 buttons

@@ -10,10 +10,10 @@ import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.EventQueue;
+import java.util.Date;
 
 public class LogIn extends JFrame {
 
@@ -75,7 +75,8 @@ contentPane.setLayout(null);
 		JButton btnLogOn = new JButton("Log on");
 		btnLogOn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
-				
+				Date date = new Date();
+				System.out.println("Start:"+ date.toString());
 				String name=textField.getText();
 				String password=passwordField.getText();
 				
@@ -95,6 +96,9 @@ contentPane.setLayout(null);
 					ServerGUI gui= new ServerGUI(1500);
 					ClientGUI cGui= new ClientGUI("localhost", 1500);
 					cGui.setVisible(true);
+					Date date2= new Date();
+					System.out.println("End: "+ date2.toString());
+					System.err.println(date2.getTime()-date.getTime()+ " Millisecondes");
 					cGui.tf.setText(name);
 					CloseJframe();
 				}

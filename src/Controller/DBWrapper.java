@@ -37,7 +37,7 @@ public class DBWrapper implements java.io.Serializable {
 					e1.printStackTrace();
 				}
 				try {
-					con= DriverManager.getConnection("jdbc:mysql://localhost:3306/Kea Chat","root", "");
+					con= DriverManager.getConnection("jdbc:mysql://localhost:3306/keachatting","root", "");
 					System.out.println("worked!");
 					return true;
 				} catch (SQLException e) {
@@ -167,17 +167,17 @@ public class DBWrapper implements java.io.Serializable {
 //	this method is responsible for saving new user
 	public boolean saveUser(String name, String mail, String password)
 		 {
-		try {
-			connect();
-			
-			System.out.println("JNDI connection  created in saveUser: " + con.toString());
-			stmt = con.createStatement();
-			sqlString = "INSERT INTO user(username,passHash, email) VALUES('"
-					+ name
-					+ "', '"
-					+ password
-					+ "', '"
- 					+ "' )";
+		try
+		{
+		System.out.println("JNDI connection  created in saveUser: " + con.toString());
+		stmt = con.createStatement();
+		sqlString = "INSERT INTO user(username,passHash, email) VALUES('"
+				+ name
+				+ "', '"
+				+ password
+				+ "', '"
+				+ mail
+				+ "' )";
 			
 			stmt.executeUpdate(sqlString);
 			 con.close();
